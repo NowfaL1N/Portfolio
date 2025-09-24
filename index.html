@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nowfal's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      scroll-behavior: smooth;
+    }
+
+    /* Custom scrollbar for better aesthetics */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #1e1e1e;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #444;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    .nav-link {
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #4a90e2;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .section-title {
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: #4a90e2;
+      border-radius: 2px;
+    }
+
+    .project-card {
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-gray-100">
+
+  <!-- Navigation Bar -->
+  <header class="bg-[#1e1e1e] shadow-lg sticky top-0 z-50 rounded-b-xl">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-3xl font-bold text-gray-50 tracking-wider">Nowfal<span class="text-[#4a90e2]">.</span></a>
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <!-- Mobile menu button -->
+      <button id="menu-btn" class="md:hidden text-gray-100 focus:outline-none">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#1e1e1e] px-4 pb-4 rounded-b-xl">
+      <ul class="flex flex-col space-y-4 text-center">
+        <li><a href="#home" class="nav-link block py-2">Home</a></li>
+        <li><a href="#about" class="nav-link block py-2">About</a></li>
+        <li><a href="#projects" class="nav-link block py-2">Projects</a></li>
+        <li><a href="#contact" class="nav-link block py-2">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-4 py-20">
+      <div class="relative w-40 h-40 rounded-full bg-gradient-to-br from-[#4a90e2] to-[#7f9cf5] p-1 mb-6 animate-pulse-slow">
+        <img src="C:\portfolio\images\a12e85a1-6c4a-4762-a519-7f7afeedede7.jpg" alt="Nowfal" class="rounded-full w-full h-full object-cover">
+      </div>
+      <h2 class="text-5xl md:text-6xl font-extrabold tracking-tight">Hi, I'm <span class="text-[#4a90e2]">Nowfal</span></h2>
+      <p class="text-xl md:text-2xl text-gray-400 mt-4 font-light">Web Developer & Designer</p>
+      <p class="mt-6 max-w-2xl text-center text-lg italic text-gray-400">"Turning ideas into reality with code."</p>
+      <a href="C:\portfolio\images\NOWFAL N RESUME (1) (1).pdf" class="mt-8 bg-[#4a90e2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#3b7ac2] transition-colors duration-300 transform hover:scale-105">Download Resume</a>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 px-6 max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold mb-12 text-center section-title">About Me</h2>
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
+        <div class="md:w-1/2 text-lg leading-relaxed">
+          <p class="mb-6">I am a passionate web developer with a background in computer science. I love building interactive and visually appealing web applications. I enjoy solving problems and continuously learning new technologies.</p>
+          <p class="mb-6">My journey into web development started with a curiosity to understand how websites work, which quickly grew into a passion for creating dynamic and engaging user experiences.</p>
+        </div>
+        <div class="md:w-1/2 grid gap-8">
+          <!-- Skills -->
+          <div class="bg-[#1e1e1e] p-8 rounded-xl shadow-lg border border-[#2e2e2e]">
+            <h3 class="text-2xl font-semibold mb-4 text-[#4a90e2]">Key Skills</h3>
+            <ul class="flex flex-wrap gap-4">
+              <li class="bg-gray-700 px-4 py-1 rounded-full text-sm font-medium">HTML</li>
+              <li class="bg-gray-700 px-4 py-1 rounded-full text-sm font-medium">CSS</li>
+              <li class="bg-gray-700 px-4 py-1 rounded-full text-sm font-medium">Python</li>
+              <li class="bg-gray-700 px-4 py-1 rounded-full text-sm font-medium">Tailwind CSS</li>
+            </ul>
+          </div>
+          <!-- Education & Experience -->
+          <div class="bg-[#1e1e1e] p-8 rounded-xl shadow-lg border border-[#2e2e2e]">
+            <h3 class="text-2xl font-semibold mb-4 text-[#4a90e2]">Education & Experience</h3>
+            <ul class="space-y-4">
+              <li>
+                <strong class="text-gray-200">B.E Computer Science and Engineering</strong>
+                <p class="text-sm text-gray-400">JCT College of Engineering and Technology, Coimbatore (2022–2026)</p>
+                <p class="text-xs text-gray-500">CGPA: 8.31 (Pursuing 4th Year)</p>
+              </li>
+              <li>
+                <strong class="text-gray-200">HSS</strong>
+                <p class="text-sm text-gray-400">Vijayamadha Convent HSS, Chittur, Palakkad (2020–2022)</p>
+                <p class="text-xs text-gray-500">80.8%</p>
+              </li>
+              <li>
+                <strong class="text-gray-200">SSLC</strong>
+                <p class="text-sm text-gray-400">Sree Narayana Public School, Kollengode, Palakkad (2019–2020)</p>
+                <p class="text-xs text-gray-500">71.2%</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-[#181818]">
+      <h2 class="text-4xl font-bold mb-12 text-center section-title">Projects</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Project 1 -->
+        <div class="project-card bg-[#1e1e1e] rounded-xl shadow-lg p-6 border border-[#2e2e2e]">
+          <div class="overflow-hidden rounded-lg mb-4">
+            <img src="C:\portfolio\images\d4c2b1eb-53a9-444e-a542-bae8a7696acb.jpg" alt="Project Screenshot" class="w-full h-auto rounded-lg">
+          </div>
+          <h3 class="text-2xl font-semibold mb-2 text-[#4a90e2]">Spotify Lyrics Extractor</h3>
+          <p class="text-sm mb-4 text-gray-400">A tool built with Python to extract lyrics from Spotify songs.</p>
+          <a href="https://github.com/NowfaL1N/Spotify-lyrics-extractor" class="inline-block text-[#4a90e2] text-sm font-semibold hover:underline">View on GitHub &rarr;</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card bg-[#1e1e1e] rounded-xl shadow-lg p-6 border border-[#2e2e2e]">
+          <div class="overflow-hidden rounded-lg mb-4">
+            <img src="C:\portfolio\images\cefe5e81-8806-4738-8ccb-b36926cf4a4c.jpg" alt="Project Screenshot" class="w-full h-auto rounded-lg">
+          </div>
+          <h3 class="text-2xl font-semibold mb-2 text-[#4a90e2]">nextjs-ai-chatbot</h3>
+          <p class="text-sm mb-4 text-gray-400">A modern AI chatbot application developed using Next.js.</p>
+          <a href="https://github.com/NowfaL1N/nextjs-ai-chatbot?tab=readme-ov-file" class="inline-block text-[#4a90e2] text-sm font-semibold hover:underline">View on GitHub &rarr;</a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card bg-[#1e1e1e] rounded-xl shadow-lg p-6 border border-[#2e2e2e]">
+          <div class="overflow-hidden rounded-lg mb-4">
+            <img src="C:\portfolio\images\c857461c-38d1-44db-9961-9a881372287b.jpg" alt="Project Screenshot" class="w-full h-auto rounded-lg">
+          </div>
+          <h3 class="text-2xl font-semibold mb-2 text-[#4a90e2]">Bank Account Management</h3>
+          <p class="text-sm mb-4 text-gray-400">A simple and effective bank account management system.</p>
+          <a href="https://github.com/NowfaL1N/bank-account-management" class="inline-block text-[#4a90e2] text-sm font-semibold hover:underline">View on GitHub &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold mb-12 text-center section-title">Contact Me</h2>
+      <form action="https://formspree.io/f/movnpenk" method="POST" class="space-y-6 bg-[#1e1e1e] p-8 rounded-xl shadow-lg border border-[#2e2e2e]">
+        <input type="text" name="name" placeholder="Your Name" class="w-full bg-[#181818] text-gray-100 border border-[#2e2e2e] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4a90e2] transition-all" required>
+        <input type="email" name="email" placeholder="Your Email" class="w-full bg-[#181818] text-gray-100 border border-[#2e2e2e] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4a90e2] transition-all" required>
+        <textarea name="message" placeholder="Your Message" rows="5" class="w-full bg-[#181818] text-gray-100 border border-[#2e2e2e] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4a90e2] transition-all" required></textarea>
+        <div class="text-center">
+          <button type="submit" class="bg-[#4a90e2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#3b7ac2] transition-colors duration-300 transform hover:scale-105 w-full md:w-auto">Send Message</button>
+        </div>
+      </form>
+      <!-- Social Icons -->
+      <div class="flex justify-center space-x-6 mt-12">
+        <a href="https://github.com/NowfaL1N" class="text-gray-400 hover:text-[#4a90e2] transition-colors" aria-label="GitHub">
+          <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.83 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.37-1.34-3.37-1.34-.454-1.156-1.11-1.46-1.11-1.46-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.646.35-1.088.636-1.338-2.22-.253-4.555-1.116-4.555-4.951 0-1.09.39-1.984 1.029-2.675-.103-.253-.446-1.267.098-2.646 0 0 .84-.268 2.75 1.022A9.28 9.28 0 0112 6.866c.866.008 1.733.111 2.564.327 1.909-1.29 2.747-1.022 2.747-1.022.546 1.379.202 2.394.098 2.646.64.691 1.029 1.585 1.029 2.675 0 3.842-2.336 4.695-4.564 4.943.359.31.678.921.678 1.856 0 1.336-.012 2.419-.012 2.747 0 .268.18.577.688.484C20.138 20.208 23 16.452 23 12.017 23 6.484 18.522 2 12 2z" clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/nowfal-n-166a4a279/" class="text-gray-400 hover:text-[#4a90e2] transition-colors" aria-label="LinkedIn">
+            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.761 0-.971.784-1.76 1.75-1.76s1.75.789 1.75 1.76c0 .971-.784 1.761-1.75 1.761zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+        </a>
+        <a href="https://leetcode.com/u/Nowfal_N/" class="text-gray-400 hover:text-[#4a90e2] transition-colors" aria-label="LeetCode">
+            <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM6.44686 12.8229L5.34448 10.7303L9.67104 8.78316L12 12L9.67104 15.2168L5.34448 13.2697L6.44686 12.8229ZM10.5936 9.39088L12.922 13.6231L16.2736 12.288L13.9452 8.05581L10.5936 9.39088ZM13.078 10.3769L10.7496 14.6091L14.0991 15.9416L16.4275 11.7093L13.078 10.3769Z" fill="currentColor"/>
+            </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-sm text-gray-500 bg-[#1e1e1e]">
+    &copy; 2025 Nowfal. All rights reserved.
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      const navLinks = document.querySelectorAll('#mobile-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
